@@ -26,7 +26,7 @@ export async function GET() {
 
         if (!scrapedProduct) throw new Error("No product found");
 
-        const updatedPriceHistory = [
+        const updatedPriceHistory: any = [
           ...currentProduct.priceHistory,
           { price: scrapedProduct.currentPrice },
         ];
